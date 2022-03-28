@@ -59,11 +59,6 @@ def get_credentials():
 if __name__ == "__main__":
 
 	print("Starting test")
-
-	# api_key = "AIzaSyBkjflmQCEl5sZh9Zfu90glHeFFjUHZUug"
-	# yt = build('youtube', 'v3', developerKey = api_key)
-	# wee = yt.channels().list(part = "snippet", id = "UCdXaunstBnHTQVeSCUZ5HtQ").execute()
-	# print(wee)
 	
 	credentials = get_credentials()
 	yt = build('youtube', 'v3', credentials = credentials)
