@@ -167,6 +167,7 @@ if __name__ == "__main__":
 
 	print("Starting test")
 
+
 	# Testing credentials
 	# credentials = YTConnector.verified_credentials()
 	# yt = build('youtube', 'v3', credentials = credentials)
@@ -185,6 +186,15 @@ if __name__ == "__main__":
 	for song in songs:
 		print(song['snippet']['title'])
 
+
+
+	
+	# credentials = get_credentials()
+	# yt = build('youtube', 'v3', credentials = credentials)
+	# foo = yt.playlists().list(part = "snippet", mine = True)
+	# bar = foo.execute()['items']
+	# for i in bar:
+	# 	print(i['snippet']['title'])
 
 	print("Finished test")
 
