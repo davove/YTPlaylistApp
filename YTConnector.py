@@ -1,4 +1,4 @@
-#YT Connector
+#YTConnector
 
 __doc__ = """
 YTConnector is for dealing with connections to Youtube for data. It deals with building the service,
@@ -176,25 +176,15 @@ if __name__ == "__main__":
 	# for i in bar:
 	# 	print(i['snippet']['title'])
 
-	playlists = YTConnector.get_playlists().items()
+	playlists = YTConnector.get_playlists(doVerify = True).items()
 	for playlist, PlID in playlists:
 		print(playlist + ' : ' + PlID)
 
 	target = input("What playlist would you like to access? Capitalization matters.\n")
 
-	songs = YTConnector.get_playlist_items(playlist_name = target)
+	songs = YTConnector.get_playlist_items(playlist_name = target, doVerify = True)
 	for song in songs:
 		print(song['snippet']['title'])
-
-
-
-	
-	# credentials = get_credentials()
-	# yt = build('youtube', 'v3', credentials = credentials)
-	# foo = yt.playlists().list(part = "snippet", mine = True)
-	# bar = foo.execute()['items']
-	# for i in bar:
-	# 	print(i['snippet']['title'])
 
 	print("Finished test")
 
